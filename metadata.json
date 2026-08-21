@@ -1,0 +1,6 @@
+{
+  "name": "BBoIT Digital Platform",
+  "description": "The official digital investment and trade gateway for the Balochistan Board of Investment & Trade.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

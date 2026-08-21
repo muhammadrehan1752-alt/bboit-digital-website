@@ -1,0 +1,12 @@
+export { Hero } from "./Hero";
+export { WhyBalochistan } from "./WhyBalochistan";
+export { ExploreMap } from "./ExploreMap";
+export { Opportunities } from "./Opportunities";
+export { Sectors } from "./Sectors";
+export { Gwadar } from "./Gwadar";
+export { People } from "./People";
+export { Leadership } from "./Leadership";
+export { KnowledgeCentre } from "./KnowledgeCentre";
+export { NewsEvents } from "./NewsEvents";
+export { DataMetrics } from "./DataMetrics";
+export { Partners } from "./Partners";

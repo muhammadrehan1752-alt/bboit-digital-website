@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #050B07;
+  --color-primary-foreground: #E8EBE9;
+  --color-secondary: #0A140C;
+  --color-secondary-foreground: #E8EBE9;
+  --color-accent: #AAB362;
+  --color-accent-foreground: #050B07;
+  --color-support: #1A3326;
+  --color-background: #050A07;
+  --color-foreground: #E8EBE9;
+  --color-card: #0A120D;
+  --color-card-foreground: #E8EBE9;
+  --color-border: rgba(170, 179, 98, 0.15);
+  --color-charcoal: #050A07;
+
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Georgia', 'Playfair Display', ui-serif, serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-accent selection:text-primary;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+
+  .theme-midnight {
+    --color-primary: #000000;
+    --color-primary-foreground: #FFFFFF;
+    --color-secondary: #0a0a0a;
+    --color-secondary-foreground: #FFFFFF;
+    --color-accent: #00FFD1;
+    --color-accent-foreground: #000000;
+    --color-support: #001A33;
+    --color-background: #000000;
+    --color-foreground: #FFFFFF;
+    --color-card: #050505;
+    --color-card-foreground: #FFFFFF;
+    --color-border: rgba(0, 255, 209, 0.2);
+    --color-charcoal: #000000;
+  }
+  
+  .theme-light {
+    --color-primary: #FFFFFF;
+    --color-primary-foreground: #050B07;
+    --color-secondary: #F3F4F6;
+    --color-secondary-foreground: #050B07;
+    --color-accent: #2B533D;
+    --color-accent-foreground: #FFFFFF;
+    --color-support: #E5E7EB;
+    --color-background: #FFFFFF;
+    --color-foreground: #050B07;
+    --color-card: #F9FAFB;
+    --color-card-foreground: #050B07;
+    --color-border: rgba(43, 83, 61, 0.15);
+    --color-charcoal: #E5E7EB;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/60 backdrop-blur-md border border-accent/10;
+  }
+  .glass-dark {
+    @apply bg-background/80 backdrop-blur-xl border border-accent/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)];
+  }
+  .theme-light .glass-dark {
+    @apply shadow-[0_8px_32px_0_rgba(0,0,0,0.05)];
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-gradient-green-gold {
+    @apply bg-gradient-to-br from-support via-card to-accent/20;
+  }
+  .text-gradient-green-gold {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-accent to-foreground;
+  }
+  .bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+}
+
